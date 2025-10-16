@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://divq67slfuf5q"]
+
+[ext_resource type="Script" uid="uid://pmc7kqewdr6u" path="res://node_3d.gd" id="1_r0811"]
+[ext_resource type="Script" uid="uid://dtouf7arglukq" path="res://orbita_camara.gd" id="2_hcujj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_isaxm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdg2m"]
+albedo_color = Color(1, 1, 0.13333334, 1)
+
+[node name="EscenaPrincipal" type="Node3D"]
+
+[node name="Cubo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_isaxm")
+surface_material_override/0 = SubResource("StandardMaterial3D_jdg2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.58109057, -0.07853831, 0.8100405, -0.65721345, 0.541765, 0.5239859, -0.4800045, -0.8368527, 0.26319808, 3.8369792, 2.974463, 1.5204976)
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("1_r0811")
+
+[node name="OrbitaCamara" type="Node3D" parent="."]
+script = ExtResource("2_hcujj")
+
+[node name="Camera3D" type="Camera3D" parent="OrbitaCamara"]
+transform = Transform3D(0.90408254, -0.18532763, 0.3850824, 0, 0.90107703, 0.43365908, -0.42735788, -0.39206362, 0.81464803, 1.5, 1.5, 2)
+fov = 69.08049

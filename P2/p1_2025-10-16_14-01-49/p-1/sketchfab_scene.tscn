@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr5o0bcc0hpah"]
-
-[ext_resource type="PackedScene" uid="uid://4qgk707vpol0" path="res://space_dog.glb" id="1_r57si"]
-
-[node name="Sketchfab_Scene" instance=ExtResource("1_r57si")]
-
-[node name="Aset_nature_rock_XL_vceicdsga_LOD0_2" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="1"]
-visible = false
