@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://divq67slfuf5q"]
+[gd_scene load_steps=12 format=3 uid="uid://divq67slfuf5q"]
 
 [ext_resource type="Script" uid="uid://caudam15tg6vy" path="res://escena_principal.gd" id="1_0or06"]
 [ext_resource type="Script" uid="uid://dtouf7arglukq" path="res://orbita_camara.gd" id="2_hcujj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dsexkpauv50go" path="res://mesh_instance_3d_2.gd" id="8_lhnnm"]
 [ext_resource type="ArrayMesh" uid="uid://dx7ihsa6px1f7" path="res://obj (1)/OBJ/Skateboard.obj" id="9_5e3jd"]
 [ext_resource type="Script" uid="uid://b1u78q0heg6ni" path="res://cono.gd" id="9_hgi0t"]
+[ext_resource type="Script" uid="uid://f2dd06h82dow" path="res://piramide.gd" id="10_5e3jd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgi0t"]
 albedo_color = Color(1, 0.24705882, 1, 1)
@@ -43,7 +44,10 @@ script = ExtResource("5_afc6g")
 transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -3, 0.5, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9893732, 0, 0.13475442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71605, 0, 0.135)
+
+[node name="Piramide" type="Node3D" parent="CSGBox3D"]
+script = ExtResource("10_5e3jd")
 
 [node name="Cono" type="Node3D" parent="."]
 script = ExtResource("9_hgi0t")

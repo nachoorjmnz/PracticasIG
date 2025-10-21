@@ -6,7 +6,7 @@ func _ready() -> void:
 	var material =StandardMaterial3D.new()
 	var st = SurfaceTool.new()
 	material.vertex_color_use_as_albedo = true
-	st.begin(Mesh.PRIMITIVE_LINES) # se pintan líneas
+	st.begin(Mesh.PRIMITIVE_LINES) 
 	st.set_color(Color(1.0, 0.0, 0.0, 1.0)) # eje X
 	st.add_vertex(Vector3(tam, 0, 0))
 	st.add_vertex(Vector3(-tam, 0, 0))
